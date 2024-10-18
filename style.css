@@ -1,0 +1,734 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+.background {
+  background-image: url("/assets/hero-bg.png");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+  z-index: -1;
+  min-height: 100%;
+}
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: -1;
+}
+.content {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  margin-top: 4rem;
+  width: 7rem;
+  height: 3.5rem;
+}
+
+.main-text {
+  margin: 1rem 3.5rem 0 3.5rem;
+  text-align: center;
+}
+#heading1 {
+  padding: 3.3rem 2rem 2rem 2rem;
+  color: rgb(31, 41, 55);
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+#heading2 {
+  text-transform: capitalize;
+  color: rgba(30, 41, 59, 0.5);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+button {
+  background-color: rgb(78, 93, 114);
+  color: white;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.01rem;
+  font-weight: 600;
+  padding: 1.4rem;
+  border-radius: 10px;
+}
+.btn {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.video {
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+  background-position: center;
+  margin-top: 2rem;
+}
+.launch {
+  width: 100%;
+  margin-top: 5%;
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+}
+.launch h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 4rem;
+}
+.boxes {
+  margin: 2rem 4.5rem;
+  display: grid;
+  margin-top: 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.box {
+  margin: 20px;
+  background-color: white;
+  padding: 1.5rem;
+  border: 0.1rem solid rgb(229, 231, 235);
+  border-radius: 0.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+.box h3 {
+  font-size: 1.5rem;
+  padding-bottom: 0.2rem;
+  font-weight: bolder;
+}
+.box:hover {
+  transform: scale(1.1);
+}
+.box p {
+  letter-spacing: 0.02rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  color: rgb(75, 85, 99);
+}
+.box1 {
+  border-bottom: 0.3rem solid rgb(243, 59, 78);
+}
+.box1 h3 {
+  background: linear-gradient(to right, rgb(243, 59, 78), rgb(243, 224, 59));
+  background-clip: text; /* Standard property for modern browsers */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the text transparent */
+  color: transparent; /* Standard fallback for other browsers */
+}
+.box2 {
+  border-bottom: 0.3rem solid rgb(78, 211, 81);
+}
+.box2 h3 {
+  background: linear-gradient(to right, rgb(78, 211, 81), rgb(78, 208, 211));
+  background-clip: text; /* Standard property for modern browsers */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the text transparent */
+  color: transparent; /* Standard fallback for other browsers */
+}
+.box3 {
+  border-bottom: 0.3rem solid rgb(0, 213, 139);
+}
+.box3 h3 {
+  background: linear-gradient(to right, rgb(0, 213, 139), rgb(0, 75, 213));
+  background-clip: text; /* Standard property for modern browsers */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the text transparent */
+  color: transparent; /* Standard fallback for other browsers */
+}
+
+.market-place {
+  width: 90%;
+}
+.market-place > h1 {
+  padding: 2rem;
+  margin: 5%;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+}
+.places {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.platform-img{
+    display: none;
+}
+.place {
+  margin: 2rem;
+  background-color: white;
+  color: rgb(75, 85, 99);
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+  display: flex;
+  padding: 1.5rem 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+}
+.place:hover {
+  transform: scale(1.1);
+}
+.img {
+  background-color: rgba(59, 130, 246, 0.2);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.img img {
+  width: 2rem;
+  height: 2rem;
+  color: black;
+}
+.para {
+  margin: 0 1rem 0 2rem;
+  letter-spacing: 0.5px;
+}
+.para h3 {
+  font-size: 1.2rem;
+  padding-bottom: 0.2rem;
+  font-weight: 600;
+}
+.para p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: rgb(107, 114, 128);
+}
+.owner-ship {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 1000;
+  margin: 7rem 3rem 0 3rem;
+}
+.own-img {
+  margin: 0 auto;
+  width: 75vw;
+  height: 45vw;
+  margin-top: 5rem;
+}
+.ownership-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/multisidedSVG.svg);
+  background-repeat: no-repeat;
+}
+.api {
+  margin: 0 5rem;
+  box-sizing: border-box;
+}
+.api > h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 6rem;
+}
+.api-content {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem;
+}
+.position{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 26%;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.6rem;
+  color: black;
+}
+.div p {
+  color: rgb(75, 85, 99);
+  font-size: 0.95rem;
+  line-height: 1.3rem;
+}
+.circle {
+  width: 15rem;
+  height: 15rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.circle h3 {
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+.circle-box {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.6rem;
+  width: 16rem;
+  height: 16rem;
+  background: linear-gradient(#0284c7, #1d4ed8, #7dd3fc);
+  border-radius: 50%;
+}
+
+.dev {
+  margin: 2% 10%;
+  padding: 0 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+.responsive{
+  display: none;
+}
+.dev > h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+.work {
+  margin-top: 10%;
+  color: rgb(31, 41, 55);
+}
+.dev-work >h1{
+  text-align: center ;
+  margin: 0 4rem;
+}
+.invest-work > h1{
+  text-align: center;
+  margin: 0 4rem;
+}
+.dev-img {
+  width: 1000px;
+  height: 550px;
+  background-image: url(/assets/dev.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.dev-work {
+  margin-bottom: 3rem;
+}
+.invest-img {
+  width: 980px;
+  height: 550px;
+  background-image: url(/assets/invest.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.token-system {
+  margin: 5% 8%;
+}
+.token-system h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+.coin {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.pana-img {
+  width: 320px;
+  height: 250px;
+  background-image: url(/assets/pCoin.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.panacoin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dao-img {
+  width: 320px;
+  height: 250px;
+  background-image: url(/assets/dCoin.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.dao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coin-box {
+  margin: 3rem;
+  background-color: white;
+  padding: 1.5rem;
+  border: 0.2rem solid rgb(229, 231, 235);
+  border-radius: 0.5rem;
+}
+.coin-box h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(75, 85, 99);
+  padding-bottom: 1rem;
+}
+.coin-box p {
+  color: rgb(75, 85, 99);
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.team {
+  margin: 5% 8%;
+  width: 100%;
+}
+.team-para {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 55rem;
+}
+.team-para h1 {
+  font-size: 3.5rem;
+}
+.team-para p {
+  margin: 1.5rem 3rem;
+  color: rgb(107, 114, 128);
+  line-height: 1.5rem;
+  padding: 0 4rem;
+}
+.teachers {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+  margin: 4rem 5rem 0 5rem ;
+}
+.teacher-box {
+  border: 1px solid rgb(209, 213, 219);
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 0.8rem;
+  transition: all 0.5s ease;
+}
+.main {
+  height: 100px;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.teacher-img {
+  width: 90px;
+  height: 90px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 5px solid rgb(209, 213, 219);
+  color: white;
+}
+.name {
+  margin: 1rem 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  color: rgb(31, 41, 55);
+  margin-bottom: 0.8rem;
+}
+.detail {
+  text-transform: capitalize;
+  padding: 0.5rem;
+}
+.teacher-box p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(75, 85, 99);
+}
+.icon {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+i {
+  padding-right: 1rem;
+  color: rgb(75, 85, 99);
+}
+.teacher-box:hover {
+  background-color: rgb(55, 65, 81);
+}
+.teacher-box:hover h3 {
+  color: white;
+}
+.teacher-box:hover p {
+  color: rgb(209, 213, 219);
+}
+.teacher-box:hover i {
+  color: rgb(209, 213, 219);
+}
+.zeeshan {
+  background-image: url(assets/zeeshan.jpeg);
+}
+.zia {
+  background-image: url(assets/ziaKhan.jpg);
+}
+.adil {
+  background-image: url(assets/adilAltaf.jpeg);
+}
+.hira {
+  background-image: url(assets/hiraKhan.jpeg);
+}
+.daniyal {
+  background-image: url(assets/daniyalNagoori.jpeg);
+}
+.waris {
+  background-image: url(assets/waris.jpeg);
+}
+.uzair {
+  background-image: url(assets/uzair.png);
+}
+.tanzeel {
+  background-image: url(assets/tanzeel.jpeg);
+}
+
+@media (max-width: 768px) {
+  #heading1 {
+    font-size: 2.8rem;
+  }
+  #heading2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  button {
+    font-size: 20px;
+  }
+  .video {
+    width: 100%;
+  }
+  .boxes {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin: 2rem;
+  }
+  .owner-ship {
+    margin: 5rem 2rem;
+  }
+  .ownership-img {
+    display: none;
+  }
+  .own-img{
+    height: 63rem;  
+  }
+  .platform-img {
+    display: block;
+    display: grid;
+    justify-content: center;
+  }
+  .platform-img h3{
+    font-size: 1.9rem;
+    color: black;
+    margin-bottom: 2rem;
+  }
+  .platform-img .img{
+    margin: 0 auto;
+    height: 180px;
+    width: 180px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+  .image{
+    background-color: #fff;
+    padding: 1rem;
+    width: 200px;
+    height: 200px; 
+    border-radius: 1rem;
+    border: 1px solid rgb(229, 231, 235);
+    margin-bottom: 1rem;
+    box-shadow:  rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+  }
+
+  .developer{
+    background-image: url(assets/developer.png);
+  }
+  .subs{
+    background-image: url(assets/subscribe.png);
+  }
+  .invest{
+    background-image: url(assets/investor.png);
+  }
+  .circle {
+    display: none;
+  }
+  .circle-box{
+    display: none;
+  }
+  .api-content{
+    display: grid;
+  }
+  .api {
+    margin: 0 2rem 3rem 2rem; /* Smaller margins for smaller screens */
+  }
+  .position{
+    width: auto;
+  }
+  .grid-container{
+    grid-template-columns: repeat(1,minmax(0,1fr));
+ } 
+ .place{
+    flex-direction: column;
+ }
+ .img{
+    align-self: center;
+    margin-bottom: 1rem ;
+ }
+ .dev-img{
+       display: none;
+ }
+ .invest-img{
+  display: none;
+ }
+ .responsive{
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+ }
+ .dev-box{
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  margin-top: 2rem;
+ }
+ .dev-box span{
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: black;
+ }
+ .dev-box p{
+  font-size: 1.1rem;
+  font-size: 500;
+  color: rgb(55, 65, 81);
+  line-height: 1.3rem;
+  letter-spacing: 0.06rem;
+  word-spacing: 0.05rem;
+ }
+ .number{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+ }
+ .intro{
+  width: 85%;
+  margin-left: 1rem;
+ }
+ .coin{
+  flex-direction: column;
+ }
+ .teachers{
+  grid-template-columns: repeat(1,minmax(0,1fr));
+ }
+ .team-para p{
+  margin: 1.5rem auto;
+ }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .boxes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .main-text {
+    margin: 2rem;
+  }
+  #heading1 {
+    padding: 0 0 2rem 0;
+    font-size: 2rem;
+  }
+  .launch h1 {
+    font-size: 2.7rem;
+    padding: 2rem;
+  }
+  .boxes {
+    margin: 1rem;
+  }
+  .teachers{
+    margin: 2rem;
+    text-align: center;
+  }
+  .main{
+    flex-direction: column;
+    height: 190px;
+    align-items: center;
+  }
+  .icon{
+      text-align: start;
+  }
+  .token-system h1 {
+    font-size: 2rem;
+  }
+  .dev-work >h1{
+    font-size: 1.3rem;
+  }
+  .invest-work > h1{
+    font-size: 1.3rem;
+  }
+  .dev > h1{
+    font-size: 2rem;
+  }
+  .dev-box span{
+    font-size: 1rem;
+ }
+ .dev-box p{
+    font-size: 0.9rem;
+    letter-spacing: 0.02rem;
+ }
+ .api > h1 {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+h3{
+   font-size: 1.3rem;
+}
+.team-para h1 {
+  font-size: 2.5rem;
+}
+.owner-ship {
+  font-size: 1.3rem;
+}
+.platform-img h3{
+  font-size: 1.3rem;
+}
+.market-place > h1 {
+  font-size: 2rem;
+}
+}
+@media (min-width: 1024px) {
+  .teachers {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
